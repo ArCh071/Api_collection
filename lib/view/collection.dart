@@ -16,7 +16,6 @@ class Collection extends StatefulWidget {
   @override
   State<Collection> createState() => _HomeState();
 }
-
 class _HomeState extends State<Collection> {
   Future dataget() async{
     final Url = "https://testsys.yes45.in/api/get-customer";
@@ -160,25 +159,25 @@ class _HomeState extends State<Collection> {
                                             ],
                                           ),
                                           //not null above
-                                          snapshot.data["data"][index]["gardian_name"]==null?SizedBox.shrink() :Row(
+                                          snapshot.data["data"][index]["gardian_name"]==null?const SizedBox.shrink() :Row(
                                             children: [
                                               Text("Gardian Name:"),
                                               Text(snapshot.data["data"][index]["gardian_name"])
                                             ],
                                           ),
 
-                                          snapshot.data["data"][index]["post"]==null?SizedBox.shrink()  :Row(
+                                          snapshot.data["data"][index]["post"]==null?const SizedBox.shrink()  :Row(
                                             children: [
                                               Text("Post: ${snapshot.data["data"][index]["post"]}"),
                                             ],
                                           ),
-                                          snapshot.data["data"][index]["pin"]==null? SizedBox.shrink() :Row(
+                                          snapshot.data["data"][index]["pin"]==null? const SizedBox.shrink() :Row(
                                             children: [
                                               Text("Pin:"),
                                               Text(snapshot.data["data"][index]["pin"])
                                             ],
                                           ),
-                                          snapshot.data["data"][index]["land_mark"]==null?SizedBox.shrink() :Row(
+                                          snapshot.data["data"][index]["land_mark"]==null?const SizedBox.shrink() :Row(
                                             children: [
                                               Text("Landmark:"),
                                               Text(snapshot.data["data"][index]["land_mark"])
@@ -274,8 +273,7 @@ showAlertDialog(BuildContext context) {
   Navigator.of(context).pop();
   },
   ),
-    ],
-  );
+    ],);
   showDialog(
     context: context,
     builder: (BuildContext context) {
